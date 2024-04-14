@@ -2,8 +2,8 @@ const { AoiClient } = require("aoi.js");
 const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@akarui/aoi.music");
 
 const bot = new AoiClient({
-  token: "-",
-  prefix: "+",
+  token: "MTIwODI1NzE4MjIyMzgzNTIxNg.GZyKwk.apQimJhUAkuuXTPaxvEr0w4DLOl71nZkoJXLpY",
+  prefix: "n.",
   intents: ["MessageContent", "Guilds", "GuildMessages", "GuildVoiceStates"],
   events: ["onMessage", "onInteractionCreate"],
   database: {
