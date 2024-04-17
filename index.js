@@ -1,9 +1,10 @@
+require('dotenv').config();
 const { AoiClient } = require("aoi.js");
 const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@akarui/aoi.music");
 
 const bot = new AoiClient({
-  token: "MTIwODI1NzE4MjIyMzgzNTIxNg.GZyKwk.apQimJhUAkuuXTPaxvEr0w4DLOl71nZkoJXLpY",
-  prefix: "n.",
+  token: process.env.TOKEN,
+  prefix: process.env.PREFIX,
   intents: ["MessageContent", "Guilds", "GuildMessages", "GuildVoiceStates"],
   events: ["onMessage", "onInteractionCreate"],
   database: {
