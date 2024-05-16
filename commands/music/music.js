@@ -1,3 +1,5 @@
+const { prototype } = require("opusscript");
+
 module.exports = [
   {
     name: "play",
@@ -13,7 +15,8 @@ module.exports = [
     $joinVc
     $addButton[1;🚫;danger;stop]
     $addButton[1;⏸️;primary;pause]
-    $addButton[1;▶️;primary;resume]`,
+    $addButton[1;▶️;primary;resume]
+    $addButton[1;🔄️;primary;loop]`,
   },
   {
     name: "pause",
@@ -37,7 +40,16 @@ module.exports = [
     prototype: "button",
     code: `
     $stopTrack
-	$leaveVC
+	  $leaveVC
     $interactionReply[Lagu dihentikan!]`,
   },
+
+  {
+    name: "loop",
+    type: "interaction",
+    prototype: "button",
+    code: `
+    $loopMode[song]
+    $interactionReply[Lagu akan di loop!]`
+  }
 ];
