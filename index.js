@@ -35,6 +35,10 @@ bot.command({
   code: `Pong! $pingms`,
 });
 
+bot.variables({
+  test: 0,
+});
+
 
 // optional (cacher / filter)
 
