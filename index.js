@@ -1,6 +1,7 @@
 require('dotenv').config();
 const { AoiClient } = require("aoi.js");
 const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@akarui/aoi.music");
+const { LoadCommands } = require("aoi.js");
 
 const bot = new AoiClient({
   token: process.env.TOKEN,
@@ -47,3 +48,5 @@ voice.addPlugin(
 voice.bindExecutor(bot.functionManager.interpreter);
 
 bot.loadCommands("./commands/", true);
+const loader = new LoadCommands(bot);
+loader.load(voice.cmds, "./voice/");
