@@ -35,8 +35,18 @@ bot.command({
   code: `Pong! $pingms`,
 });
 
+// Bot variables
+
 bot.variables({
   test: 0,
+});
+
+// Bot status
+bot.status({
+  name: "Sesuatu...",
+  type: "STREAMING",
+  time: 25,
+  url: "https://github.com/Andy2306/furina-dc-bot-aoi.js"
 });
 
 
