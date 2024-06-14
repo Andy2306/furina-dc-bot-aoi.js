@@ -32,13 +32,22 @@ const voice = new AoiVoice(bot, {
 
 bot.command({
   name: "ping",
-  code: `Pong! $pingms`,
+  code: `
+  $description[
+  Pong! $pingms
+  OS: $cpu[os]
+  Process: $cpu[process]
+  Ram: \`$ram%\` dari \`$maxRam%\`
+  ]`,
 });
 
 // Bot variables
 
 bot.variables({
   test: 0,
+  FishRandomNumber: 0,
+  FishRandomString: "",
+  
 });
 
 // Bot status
