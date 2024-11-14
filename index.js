@@ -4,6 +4,13 @@ const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@aoijs/a
 const { LoadCommands } = require("aoi.js");
 
 const client = new AoiClient({
+  nodes: [
+    {
+      host: "localhost", // Ganti dengan IP server jika di-host di tempat lain
+      port: 2333,
+      password: "",
+    },
+  ],
   token: process.env.TOKEN,
   prefix: process.env.PREFIX,
   intents: ["MessageContent", "Guilds", "GuildMessages", "GuildVoiceStates"],
@@ -43,4 +50,3 @@ voice.bindExecutor(client.functionManager.interpreter);
 
 client.loadCommands("./commands/", true);
 const loader = new LoadCommands(client);
-loader.load(voice.cmds, "./voice/");
