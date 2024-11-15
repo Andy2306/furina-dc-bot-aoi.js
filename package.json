@@ -3,7 +3,7 @@
     "@akarui/aoi.db": "^2.3.3",
     "@aoijs/aoi.music": "^1.2.2",
     "aoi.db": "^1.1.1",
-    "aoi.js": "^6.8.5",
+    "aoi.js": "^6.9.0",
     "dotenv": "^16.4.5",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^5.2.0",
